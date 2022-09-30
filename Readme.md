@@ -43,3 +43,5 @@ Version: 1.0.0
 Hostname: 14beaf9a39df
 MESSAGE:container version 1!
 ```
+
+Thanks @widemeshio
