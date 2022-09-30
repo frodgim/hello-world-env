@@ -3,43 +3,43 @@
 A docker image for learning and testing with web apps and environment variables.
 
 ```
-bithavoc/hello-world-env
+prodriguezmira/hello-world-env
 ```
 
 ### Using with local docker
 
 ```
-docker run --publish=3000:3000 --rm bithavoc/hello-world-env
+docker run --publish=3000:3000 --rm prodriguezmira/hello-world-env
 ```
 
 ```
-GET http://localhost:3000/this
+GET http://localhost:3000/
 ```
 
 Prints
 
 ```
-Hi there, I love this!
-```
-
-### Using with command arguments
-
-```
-docker run --publish=3000:3000 --rm bithavoc/hello-world-env /root/app -message "cool by arg"
+Hello, world!
+Version: 1.0.0
+Hostname: 14beaf9a39df
+MESSAGE:
 ```
 
 ### Using with environment variables
 
 ```
-docker run --publish=3000:3000 --rm -e "MESSAGE=cool by env" bithavoc/hello-world-env
+docker run -p "3000:3000" -e "MESSAGE=container version 1"  -d prodriguezmira/hello-world-env:1.0.0
 ```
 
 ```
-GET http://localhost:3000/this
+GET http://localhost:3000
 ```
 
 Prints
 
 ```
-Hi there, I love this! cool
+Hello, world!
+Version: 1.0.0
+Hostname: 14beaf9a39df
+MESSAGE:container version 1!
 ```
